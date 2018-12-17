@@ -7,7 +7,7 @@
   "bin": {},
   "scripts": {
     "test": "tsc && karma start my.conf.js && node spec/tsDefinitions.js",
-    "minify": "uglifyjs BigInteger.js -o BigInteger.min.js"
+    "minify": "terser BigInteger.js -o BigInteger.min.js"
   },
   "main": "./BigInteger",
   "repository": {
@@ -37,8 +37,8 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^1.0.4",
     "lodash": "^4.17.11",
-    "typescript": "^2.9.2",
-    "uglifyjs": "^2.4.10"
+    "terser": "^3.11.0",
+    "typescript": "^2.9.2"
   },
   "license": "Unlicense",
   "engines": {

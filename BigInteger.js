@@ -650,8 +650,7 @@ var bigInt = (function (undefined) {
 
     var pow;
     if (supportsNativeBigInt) {
-        // forced to use eval because ** is a syntax error on pre-ECMAScript2017 environments.
-        pow = eval("(a,b)=>a**b");
+        pow = function(a,b) { return a**b; };
     }
 
     NativeBigInt.prototype.pow = function (v) {
